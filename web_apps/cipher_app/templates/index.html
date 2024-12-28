@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock title %}
+{% block content %}
+    
+    <div>
+        <h2>Hello Tera {{name }}</h2>
+        <p>Jesus saves</p>
+    </div>
+
+    <hr/>
+    <div class="container">
+        <form method="POST" action="/generate">
+            <input type="text" name="raw_text" placeholder="Text"/>
+            <input type="number" name="num" placeholder="Password Len"/>
+            <button type="submit">Submit</button>
+        </form>
+        <br/>
+        <h2>{{raw_text}}</h2>
+        <h2>{{result}}</h2>
+    </div>
+
+    {% endblock  %}
