@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="container">
+    <h2>Crypto Cipher App </h2>
+
+    <form method="POST" action="/cipherize">
+        <textarea name="message" class="form-control" rows="3" placeholder="Enter Plain Text"></textarea>
+        <select name="cipher_type" class="form-control">
+            <option value="reverseText"> ReverseText</option>
+            <option value="rot13_encrypt"> Rot13</option>
+            <option value="caesar_encrypt"> Caesar Shift</option>
+            <option value="gematria_encrypt"> Gematric Shift</option>
+            
+        </select>
+        <button type="submit" class="btn btn-outline-primary">Submit</button>
+    </form>
+</div>
+
+<div class="container">
+    <p>Original Text: {{ message }}</p>
+    <p>Transformed Text: {{ results }}</p>
+    <p>Length {{ text_len }}</p>
+</div>
+{% endblock %}
